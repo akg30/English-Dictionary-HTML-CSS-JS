@@ -12,3 +12,8 @@ $("#getMeaning").click(function(){
         showMeaning.textContent="Not Found";
     })
 })
+
+$("#reloadMeaning").click(function(){
+    window.location.reload();
+    $("#reloadMeaning").prop("disabled",true);
+})  
