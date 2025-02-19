@@ -7,6 +7,7 @@ $("#getMeaning").click(function(){
     .then(response=>response.json())
     .then(data=>{
         showMeaning.textContent=`Meaning Of ${data[0]["word"]} Is ${data[0]["meanings"][0]["definitions"][0]["definition"]}`;
+        $("#reloadMeaning").prop("disabled",false);
     })
     .catch(error=>{
         showMeaning.textContent="Not Found";
